@@ -14,6 +14,7 @@ html {
 *:focus {
 	outline: none;
 }
+
 /* */
 
 .app {
@@ -36,12 +37,14 @@ form {
 }
 form.cold {
 	background-image: linear-gradient(
-			rgba(0, 110, 201, 0.4) 40%,
+			rgba(0, 110, 201, 0.3) 40%,
 			rgba(0, 0, 0, 0.95)
 		),
 		url("./assets/cold-bg.jpg");
 	background-size: cover;
 	background-position: center;
+
+	transition: all 0.5s ease-in;
 }
 form.warm {
 	background-image: linear-gradient(
@@ -51,6 +54,7 @@ form.warm {
 		url("./assets/warm-bg.jpg");
 	background-size: cover;
 	background-position: center;
+	transition: all 0.5s ease-in;
 }
 .search-box {
 	width: 100%;
@@ -83,6 +87,7 @@ form.warm {
 .weather-details-date {
 	font-size: 2rem;
 	font-weight: 400;
+	text-shadow: 2px 2px 0 rgba(49, 49, 49, 0.5);
 }
 .weather-details-temp {
 	background-color: rgba(255, 255, 255, 0.3);
