@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+/* CSS RESET */
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*:focus {
+	outline: none;
+}
+/* */
+
+.app {
+	width: 100vw;
+	/* height: 100vh; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+form {
+	margin: 0 auto;
+	max-width: 40rem;
 
-.App-link {
-  color: #61dafb;
-}
+	height: 100vh;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+
+	color: #fff;
+}
+form.cold {
+	background-image: linear-gradient(
+			rgba(0, 110, 201, 0.4) 40%,
+			rgba(0, 0, 0, 0.95)
+		),
+		url("./assets/cold-bg.jpg");
+	background-size: cover;
+	background-position: center;
+}
+form.warm {
+	background-image: linear-gradient(
+			rgba(177, 100, 0, 0.4) 40%,
+			rgba(0, 0, 0, 0.95)
+		),
+		url("./assets/warm-bg.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.search-box {
+	width: 100%;
+	text-align: center;
+}
+.search-box-input {
+	width: 80%;
+	font-size: 1.8rem;
+	padding: 2rem;
+
+	border: none;
+	border-radius: 0 0 12px 12px;
+
+	box-shadow: 0 4px 0 rgba(80, 80, 80, 0.692);
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #727272;
+}
+.weather-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+
+	margin-top: 6rem;
+}
+.weather-details-location {
+	font-size: 3.6rem;
+	text-shadow: 2px 2px 0 rgba(49, 49, 49, 0.692);
+}
+.weather-details-date {
+	font-size: 2rem;
+	font-weight: 400;
+}
+.weather-details-temp {
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 5.4rem;
+	font-weight: 800;
+	padding: 3rem;
+
+	border-radius: 20px;
+	box-shadow: 2px 3px 2px rgba(49, 49, 49, 0.692);
+	text-shadow: 2px 3px 0 rgba(49, 49, 49, 0.692);
+
+	margin: 3rem 0;
+}
+.weather-details-forecast {
+	font-size: 4.2rem;
+	font-weight: 700;
 }
